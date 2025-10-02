@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  apache:
+    image: httpd:2.4
+    container_name: apresentacao_apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./index.html:/usr/local/apache2/htdocs/index.html
+      - ./minha-foto.PNG:/usr/local/apache2/htdocs/minha-foto.PNG
